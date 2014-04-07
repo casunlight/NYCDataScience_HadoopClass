@@ -90,10 +90,14 @@ Preparation:
 
 Server configuration
 
-1. You are required to use vi editor. The basic operations are:    
-    | Mode                 | Key stokes       | 
+1. You are required to use vi editor. The basic operations are:   
+
+	```no-highlight
+	 Cheet sheet for vi
+
+    | what you want to do  | Key stokes       | 
     | ---------------------|:----------------:| 
-    | insertion modei      | i                | 
+    | insert/edit model    | i                | 
     | finish and save      | ESC->:->wq->Enter|
     | finish and not save  | ESC->q!->Enter   |
     | go to the end of line| ESC->o           |
