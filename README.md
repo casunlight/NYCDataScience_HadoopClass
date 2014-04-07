@@ -174,6 +174,105 @@
 	(you should see "/usr/lib/jvm/java-7-oracle")
 
 ### Hadoop installation and configuration
+- We are using stable Hadoop version 1.2.1 (2014-04-04)
+- the mirror is from [Columbia Univ](http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/)
+- All the operations in the below will be run on meetup1(your master node)
+
+1. download haoop source codes
+	- wget http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
+	- tar -xzvf hadoop-1.2.1.tar.gz 
+	- cd hadoop-1.2.1/conf 
+
+2. configure the environment
+	- configure Java Path
+	  - vi hadoop-env.sh
+	  - search for the line "# The java implementation to use.  Required." 
+	  - delete the "#" 
+	  - set "export JAVA_HOME=/usr/lib/jvm/java-7-oracle"
+	  - save the file
+	- configure core-site file
+	  -vi core-site.xml 
+	  - between <configuration> and </configuration>, put
+		  <property>
+			<name>fs.default.name</name>
+				<value>hdfs://meetup1:9000</value>
+		  </property>
+
+		  <property>
+			<name>hadoop.tmp.dir</name>
+			<value>/home/ubuntu/hadoop/tmp</value>
+		  </property>
+	- make new folder "~/hadoop/tmp"
+	  - cd ~
+	  - mkdir hadoop
+	  - cd hadoop
+	  - mkfir tmp
+    - configure redundance, the value is usually set as 1 or 2 and less than total number of slave nodes.
+      - cd ~
+      - cd hadoop-1.2.1/conf
+      - vi hdfs-site.xml
+      - between <configuration> and </configuration>, put
+      	<property>
+			<name>dfs.replication</name>
+			<value>2</value>
+		</property>
+	- configure master file
+	  - delect localhost
+	  - put meetup1
+	- configre slave file
+	  - delect localhost
+	  - put
+	      meetup2
+	      meetup3
+	- copy all the configuration from master node to two slave nodes
+	  - scp -r ~/hadoop-1.2.1 meetup2:/home/ubuntu
+      - scp -r ~/hadoop-1.2.1 meetup3:/home/ubuntu
+
+3. format
+	- ~/hadoop-1.2.1/bin/hadoop namenode -format 
+	- you should get "Storage directory /home/ubuntu/hadoop/tmp/dfs/name has been successfully formatted."
+	- cd ~/hadoop/tmp/
+	- you should find the two folders 
+	  - dfs->name->current
+	  - dfs->name->image
+
+4. start your hadoop
+ - ~/hadoop-1.2.1/bin/start-all.sh
+ - test whether the hadoop is running
+ - run "jps" on three instances
+  - on your master node, you should see (the numbers will vary)
+  	6919 NameNode
+	7237 JobTracker
+	7155 SecondaryNameNode
+	7445 Jps
+  - on two slave nodes, you should see (the numbers will vary)
+    7653 TaskTracker
+	7490 DataNode
+	7713 Jps
+
+5. stop your hadoop
+ - ~/hadoop-1.2.1/bin/stop-all.sh 
+
+ ## Congratulation! You have your first hadoop cluster!
+
+ ## Extra note on your hadoop log
+ - you can find log files under "cd ~/hadoop/tmp/mapred/local/userlogs/"
+ - pick one job folder, such as "job_201404071413_0002"
+ - pick one log file, such as "vi attempt_201404071413_0002_m_000001_3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
