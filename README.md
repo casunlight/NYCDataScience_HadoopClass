@@ -68,6 +68,10 @@ Preparation:
 		Custom TCP Rule, TCP, 9000, Anywhere, 0.0.0.0/0
 		Custom TCP Rule, TCP, 50000 - 50100, Anywhere, 0.0.0.0/0
 		All ICMP, ICMP, 0 - 65535, Anywhere, 0.0.0.0/0
+		
+		```no-highlight
+		Colons can be used to align columns.
+
 		| Type            | Protocol  | Port Range    | Source            |
 		| ----------------|:---------:| -------------:|------------------:|
 		| SSH             | TCP       | 22            |Anywhere 0.0.0.0/0 |
