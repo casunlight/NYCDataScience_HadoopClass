@@ -5,6 +5,7 @@ Goal:
 — run two sample map reduce jobs on the cluster
 
 Preparation:
+
 1. apply for a AWS acct 
    * go to http://aws.amazon.com/account/
 	put name, email, click on "sign in";
@@ -43,11 +44,10 @@ Preparation:
 	choose the key pair "vivian_zhang_supstat";
 	check the acknowleage box;
 	click on "launch instance",
-	you should see "Your instances are now launching
-";
-    scroll down to the bottom, click on "view instances",
-    click one each instance and rename them, such as "meetup1","meetup2","meetup3",
-    wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
+	you should see "Your instances are now launching";
+    	scroll down to the bottom, click on "view instances",
+    	click one each instance and rename them, such as "meetup1","meetup2","meetup3",
+    	wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
    *each group is like a firewall. The nodes of the same cluster belong to the same security group.
