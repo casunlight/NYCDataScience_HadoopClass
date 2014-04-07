@@ -160,6 +160,19 @@
   	- ping meetup2
  - ctrl +c to stop pinging
 
+5. install Java
+ - run the comands for each instance
+	- sudo add-apt-repository ppa:webupd8team/java
+	- sudo apt-get update
+	- sudo apt-get install oracle-java7-installer
+	(do "Enter" to select "ok", user cursor to select second "ok" and enter again)
+	- sudo apt-get install oracle-java7-set-default
+	- exit
+	- ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
+	(logout and login again to validate your new configuration)
+	- echo $JAVA_HOME
+	(you should see "/usr/lib/jvm/java-7-oracle")
+
 ### Hadoop installation and configuration
 
 
