@@ -142,7 +142,8 @@ Server configuration
 
  * in the end, you should have a notepad which contains three rsa keys
 
- 2. configure "authorized_keys" file for three instances
+
+2. configure "authorized_keys" file for three instances
 
  * on meetup1 instance
 
@@ -157,7 +158,8 @@ Server configuration
 
  * on meetup3 instance, do the same
 
- 4. configure "hosts" file for three instances
+
+3. configure "hosts" file for three instances
 
  * on meetup 1 instance
 
@@ -171,7 +173,8 @@ Server configuration
 
  * on meetup3 instance, do the same
 
- 5. test connections among cluster
+
+4. test connections among cluster
   * from meetup1
 
   	- ping meetup2
@@ -183,7 +186,7 @@ Server configuration
   	- ping meetup3
 
   * from meetup3
-  
+
   	- ping meetup1
   	- ping meetup2
 
