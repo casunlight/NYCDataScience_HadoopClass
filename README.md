@@ -56,14 +56,21 @@ Preparation:
 	- click on "create security groups",put name such as "meetup_security";
 	- under "inbound" tab, cick on add rules;
         - add three rules:
-        - choose type="SSH",  "save"
-		- choose type="ALL ICM", Source=Anywhere, "save"
-		- choose type="Custom TCP", port range="9000", "save"
-		- choose type="Custom TCP", port range="9001", "save"
-		- choose type="Custom TCP", port range="50000 - 50100", "save"
-		
+        - choose type="SSH",  "save";
+		- choose type="ALL ICM", Source=Anywhere, "save";
+		- choose type="Custom TCP", port range="9000", choose "anywhere",save;
+		- choose type="Custom TCP", port range="9001", choose "anywhere",save;
+		- choose type="Custom TCP", port range="50000 - 50100", choose "anywhere", save;
+		- double check all your inbound setting, they should look like:
+		Type, Protocol, Port Range, Source
+		SSH, TCP, 22, Anywhere 0.0.0.0/0
+		Custom TCP Rule, TCP, 9001, Anywhere, 0.0.0.0/0
+		Custom TCP Rule, TCP, 9000, Anywhere, 0.0.0.0/0
+		Custom TCP Rule, TCP, 50000 - 50100, Anywhere, 0.0.0.0/0
+		All ICMP, ICMP, 0 - 65535 (or NA), Anywhere, 0.0.0.0/0
+
 		```no-highlight
-		double check all your inbound setting, they should look like:
+		Colons can be used to align columns.
 
 		| Type            | Protocol  | Port Range    | Source            |
 		| ----------------|:---------:| -------------:|------------------:|
