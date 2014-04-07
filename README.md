@@ -10,11 +10,11 @@ Preparation:
 
 1. apply for a AWS acct 
    * go to http://aws.amazon.com/account/
-	put name, email, click on "sign in";
-	put full name, email, billing info, credit bard;
-	pass the phone number authorization;
-	select AWS support plan, use Basic (Free);
-	You should see message "Thank you for updating your Amazon Web Services Account!”.
+	- put name, email, click on "sign in";
+	- put full name, email, billing info, credit bard;
+	- pass the phone number authorization;
+	- select AWS support plan, use Basic (Free);
+	- see message "Thank you for updating your Amazon Web Services Account!”.
 
 2. log in your acct
    * sign in using the acct/pass you just made.
