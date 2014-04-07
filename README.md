@@ -109,25 +109,20 @@ Server configuration
 * find your meetup1's public DNS and get its RSA public key
 
     - open terminal 1, ssh to your server
-    
+
       - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in .ssh folder, so I do "cd .ssh".
-
    	  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
-
-   	- Are you sure you want to continue connecting (yes/no)? yes
-    - generate your server key
-    - ssh-keygen -t rsa 
-    - do "Enter" three times
-    - cd .ssh
-    - vi id_rsa.pub
-    - copy and paste it into a text file for future
+   	  - Are you sure you want to continue connecting (yes/no)? yes
+      - generate your server key
+      - ssh-keygen -t rsa 
+      - do "Enter" three times
+      - cd .ssh
+      - vi id_rsa.pub
+      - copy and paste it into a text file for future
 
 * find your meetup2's public DNS and generate its RSA public key
 
     - open terminal 2, ssh to your server
-
-      - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in .ssh folder, so I do "cd .ssh".
-
     - two parts are different from meetup1
       - meetup2 has different public DNS address
       - copy and paste meetup2's id_ras.pub into the same file as second line
@@ -135,9 +130,6 @@ Server configuration
 * find your meetup3's public DNS and generate its RSA public key
 
      - open terminal 3, ssh to your server
-
-       - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in .ssh folder, so I do "cd .ssh".
-
      - two parts are different  from meetup1
       - meetup3 has different public DNS address
       - copy and paste meetup3's id_ras.pub into the same file as third line
