@@ -176,13 +176,14 @@
 ### Hadoop installation and configuration
  - We are using stable Hadoop version 1.2.1 (2014-04-04)
  - the mirror is from [Columbia Univ](http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/)
- - All the operations in the below will be run on meetup1(your master node)
-  + download haoop source codes
+ - all the operations in the below will be run on meetup1(your master node)
+
+ 1. download haoop source codes
 	- wget http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
 	- tar -xzvf hadoop-1.2.1.tar.gz 
 	- cd hadoop-1.2.1/conf 
 
-  + configure the environment
+ 2. configure the environment
 	- configure Java Path
 	  - vi hadoop-env.sh
 	  - search for the line "# The java implementation to use.  Required." 
