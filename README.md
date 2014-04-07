@@ -2,17 +2,17 @@
 
 ## Goal: 
 
-— configure a Hadoop Cluster on Amazon EC2
+	* configure a Hadoop Cluster on Amazon EC2
 
-— run two sample map reduce jobs on the cluster
+	* run two sample map reduce jobs on the cluster
 
 ## I will go over the details:
 
-- Preparation
+	+ Preparation
 
-- Server configuration
+	+ Server configuration
 
-- Hadoop installation and configuration
+	+ Hadoop installation and configuration
 
 ### Preparation:
 
