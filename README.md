@@ -55,7 +55,7 @@ Preparation:
    * Each group is like a firewall. The nodes of the same cluster belong to the same security group.
 	- click on "create security groups",put name such as "meetup_security";
 	- under "inbound" tab, cick on add rules;
-        - add three rules:
+        - add five rules:
         - choose type="SSH",  "save";
 		- choose type="ALL ICM", Source=Anywhere, "save";
 		- choose type="Custom TCP", port range="9000", choose "anywhere",save;
@@ -65,13 +65,13 @@ Preparation:
 		```no-highlight
 		double check all your inbound setting, they should look like:
 
-		| Type            | Protocol  | Port Range    | Source            |
-		| ----------------|:---------:| -------------:|------------------:|
-		| SSH             | TCP       | 22            |Anywhere 0.0.0.0/0 |
-		| Custom TCP Rule | TCP       | 9001          |Anywhere 0.0.0.0/0 |
-		| Custom TCP Rule | TCP       | 9000          |Anywhere 0.0.0.0/0 |
-		| Custom TCP Rule | TCP       | 50000 - 50100 |Anywhere 0.0.0.0/0 |
-		| All ICMP        | ICMP      | 0 - 65535(or na)    |Anywhere 0.0.0.0/0 |
+		| Type            | Protocol  | Port Range      | Source            |
+		| ----------------|:---------:| ---------------:|------------------:|
+		| SSH             | TCP       | 22              |Anywhere 0.0.0.0/0 |
+		| Custom TCP Rule | TCP       | 9001            |Anywhere 0.0.0.0/0 |
+		| Custom TCP Rule | TCP       | 9000            |Anywhere 0.0.0.0/0 |
+		| Custom TCP Rule | TCP       | 50000 - 50100   |Anywhere 0.0.0.0/0 |
+		| All ICMP        | ICMP      | 0 - 65535(or na)|Anywhere 0.0.0.0/0 |
 
 
 6. manage your instance
