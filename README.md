@@ -236,9 +236,9 @@
 	  - dfs->name->image
 
  4. start your hadoop
- - ~/hadoop-1.2.1/bin/start-all.sh
- - test whether the hadoop is running
- - run "jps" on three instances
+  - ~/hadoop-1.2.1/bin/start-all.sh
+  - test whether the hadoop is running
+  - run "jps" on three instances
   - on your master node, you should see (the numbers will vary)
   	6919 NameNode
 	7237 JobTracker
@@ -250,41 +250,12 @@
 	7713 Jps
 
  5. stop your hadoop
- - ~/hadoop-1.2.1/bin/stop-all.sh 
+  - ~/hadoop-1.2.1/bin/stop-all.sh 
 
 ## Congratulation! You have your first hadoop cluster!
 
  ### Extra note on your hadoop log
- - you can find log files under "cd ~/hadoop/tmp/mapred/local/userlogs/"
- - pick one job folder, such as "job_201404071413_0002"
- - pick one log file, such as "vi attempt_201404071413_0002_m_000001_3"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  - you can find log files under "cd ~/hadoop/tmp/mapred/local/userlogs/"
+  - pick one job folder, such as "job_201404071413_0002"
+  - pick one log file, such as "vi attempt_201404071413_0002_m_000001_3"
 
