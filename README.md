@@ -90,7 +90,7 @@
 
 ### Server configuration
 
-0. You are required to use vi editor. The basic operations are:   
+1. You are required to use vi editor. The basic operations are:   
 
 	```no-highlight
 	 Cheet sheet for vi
@@ -102,7 +102,7 @@
     | finish and not save  | ESC->q!->Enter   |
     | go to the end of line| ESC->o           |
 
-1. generate your server rsa key for three instances
+2. generate your server rsa key for three instances
  - find your meetup1's public DNS and get its RSA public key
     - open terminal 1, ssh to your server
       - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in .ssh folder, so I do "cd .ssh".
@@ -126,7 +126,7 @@
       - copy and paste meetup3's id_ras.pub into the same file as third line
  - in the end, you should have a file which contains three rsa keys
 
-2. configure "authorized_keys" file for three instances
+3. configure "authorized_keys" file for three instances
  - on meetup1 instance
   - cd .ssh
   - vi authorized_keys
@@ -137,7 +137,7 @@
  - on meetup2 instance, do the same
  - on meetup3 instance, do the same
 
-3. configure "hosts" file for three instances
+4. configure "hosts" file for three instances
  - on meetup 1 instance
  	- sudo vi /etc/hosts
  	- find your private DNS from EC2 console
@@ -148,7 +148,7 @@
  - on meetup2 instance, do the same
  - on meetup3 instance, do the same
 
-4. test connections among cluster
+5. test connections among cluster
  - from meetup1
   	- ping meetup2
   	- ping meetup3
@@ -160,7 +160,7 @@
   	- ping meetup2
  - ctrl +c to stop pinging
 
-5. install Java
+6. install Java
  - run the comands for each instance
 	- sudo add-apt-repository ppa:webupd8team/java
 	- sudo apt-get update
@@ -260,33 +260,3 @@
  - you can find log files under "cd ~/hadoop/tmp/mapred/local/userlogs/"
  - pick one job folder, such as "job_201404071413_0002"
  - pick one log file, such as "vi attempt_201404071413_0002_m_000001_3"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
