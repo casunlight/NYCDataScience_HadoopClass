@@ -41,7 +41,9 @@ Preparation:
 	- see a download file window, choose a secure folder to save your .pem file which will be your private key. For me, I get the file called "EC2UbuntuLTSThreeT1Micro.pem";
 
 4. create EC2 instances
+
    * Each instance is like a seperate machine.
+
  	- on your left panel of EC2 dashboard,, click on 
 	"instances" category's "instances";
 	- click on button "launch instance";
@@ -60,11 +62,13 @@ Preparation:
     	wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
+
 	* Each group is like a firewall. The nodes of the same cluster belong to the same security group.
 
 	* click on "create security groups",put name such as "meetup_security";
 
-	* under "inbound" tab, cick on add rules;
+	* under "inbound" tab, cick on add rules
+
         - add five rules:
         - choose type="SSH",  "save";
 		- choose type="ALL ICM", Source=Anywhere, "save";
@@ -85,7 +89,9 @@ Preparation:
 
 
 6. manage your instance
+
    * know how to turn on and off the instances
+
 	- select the instance, right click to choose "stop", you won't be able to use this instance and won't be charged;
    	- select the instance, right click to choose "start", you can use the instance and will be charged.
    	Next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.
@@ -139,6 +145,7 @@ Server configuration
  2. configure "authorized_keys" file for three instances
 
  * on meetup1 instance
+
   - cd .ssh
   - vi authorized_keys
   - go to the end of file by "ESC->o"
@@ -147,11 +154,13 @@ Server configuration
   - save and exit file by "ESC->wq!"
 
  * on meetup2 instance, do the same
+
  * on meetup3 instance, do the same
 
  4. configure "hosts" file for three instances
 
  * on meetup 1 instance
+
  	- sudo vi /etc/hosts
  	- find your private DNS from EC2 console
  	-- add three lines to the end of files, such as
@@ -159,23 +168,27 @@ Server configuration
  	172.31.43.179 meetup2
  	172.31.43.178 meetup3
  * on meetup2 instance, do the same
+
  * on meetup3 instance, do the same
 
  5. test connections among cluster
   * from meetup1
+
   	- ping meetup2
   	- ping meetup3
 
   * from meetup2
+
   	- ping meetup1
   	- ping meetup3
 
   * from meetup3
+  
   	- ping meetup1
   	- ping meetup2
 
   * ctrl +c to stop pinging
-  
+
 
 
 
