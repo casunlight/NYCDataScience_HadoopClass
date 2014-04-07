@@ -174,16 +174,15 @@
 	(you should see "/usr/lib/jvm/java-7-oracle")
 
 ### Hadoop installation and configuration
-- We are using stable Hadoop version 1.2.1 (2014-04-04)
-- the mirror is from [Columbia Univ](http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/)
-- All the operations in the below will be run on meetup1(your master node)
-
-1. download haoop source codes
+ - We are using stable Hadoop version 1.2.1 (2014-04-04)
+ - the mirror is from [Columbia Univ](http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/)
+ - All the operations in the below will be run on meetup1(your master node)
+  + download haoop source codes
 	- wget http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
 	- tar -xzvf hadoop-1.2.1.tar.gz 
 	- cd hadoop-1.2.1/conf 
 
-2. configure the environment
+  + configure the environment
 	- configure Java Path
 	  - vi hadoop-env.sh
 	  - search for the line "# The java implementation to use.  Required." 
@@ -253,9 +252,10 @@
 5. stop your hadoop
  - ~/hadoop-1.2.1/bin/stop-all.sh 
 
- ## Congratulation! You have your first hadoop cluster!
 
- ## Extra note on your hadoop log
+## Congratulation! You have your first hadoop cluster!
+
+ ### Extra note on your hadoop log
  - you can find log files under "cd ~/hadoop/tmp/mapred/local/userlogs/"
  - pick one job folder, such as "job_201404071413_0002"
  - pick one log file, such as "vi attempt_201404071413_0002_m_000001_3"
