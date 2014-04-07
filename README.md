@@ -87,7 +87,6 @@
 		| Custom TCP Rule | TCP       | 50000 - 50100   |Anywhere 0.0.0.0/0 |
 		| All ICMP        | ICMP      | 0 - 65535(or na)|Anywhere 0.0.0.0/0 |
 
-
 6. manage your instance
 
    * know how to turn on and off the instances
