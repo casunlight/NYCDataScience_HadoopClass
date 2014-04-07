@@ -103,6 +103,7 @@ Server configuration
     | go to the end of line| ESC->o           |
 
 1. generate your server rsa key
+
 	* find your meetup1's public DNS and get its RSA public key
     - ssh to your server
    	 ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
