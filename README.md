@@ -68,6 +68,14 @@ Preparation:
 		Custom TCP Rule, TCP, 9000, Anywhere, 0.0.0.0/0
 		Custom TCP Rule, TCP, 50000 - 50100, Anywhere, 0.0.0.0/0
 		All ICMP, ICMP, 0 - 65535, Anywhere, 0.0.0.0/0
+		| Type            | Protocol  | Port Range    | Source            |
+		| ----------------|:---------:| -------------:|------------------:|
+		| SSH             | TCP       | 22            |Anywhere 0.0.0.0/0 |
+		| Custom TCP Rule | TCP       | 9001          |Anywhere 0.0.0.0/0 |
+		| Custom TCP Rule | TCP       | 9000          |Anywhere 0.0.0.0/0 |
+		| Custom TCP Rule | TCP       | 50000 - 50100 |Anywhere 0.0.0.0/0 |
+		| All ICMP        | ICMP      | 0 - 65535     |Anywhere 0.0.0.0/0 |
+
 
 6. manage your instance
    * know how to turn on and off the instances
