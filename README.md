@@ -52,7 +52,7 @@ Preparation:
     	wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
-   *each group is like a firewall. The nodes of the same cluster belong to the same security group.
+   * Each group is like a firewall. The nodes of the same cluster belong to the same security group.
 	click on "edit security groups",
 	under default security group name "launch-wizard-1", cick on add rules;
 	we are adding three rules:
@@ -61,9 +61,10 @@ Preparation:
 	third, choose type="Custom TCP", port range="50000-50100".
 
 6. manage your instance
-   select the instance, right click to choose "stop", you won't be able to use this instance and won't be charged;
-   select the instance, right click to choose "start", you can use the instance and will be charged.
-   Next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.
+   * know how to turn on and off the instances
+	select the instance, right click to choose "stop", you won't be able to use this instance and won't be charged;
+   	select the instance, right click to choose "start", you can use the instance and will be charged.
+   	Next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.
 
 7.
 
