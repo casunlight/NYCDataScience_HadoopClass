@@ -114,51 +114,51 @@
       - cd .ssh
       - vi id_rsa.pub
       - copy and paste it into a text file for future
-- find your meetup2's public DNS and generate its RSA public key
+ - find your meetup2's public DNS and generate its RSA public key
     - open terminal 2, ssh to your server
     - two parts are different from meetup1
       - meetup2 has different public DNS address
       - copy and paste meetup2's id_ras.pub into the same file as second line
-- find your meetup3's public DNS and generate its RSA public key
+ - find your meetup3's public DNS and generate its RSA public key
      - open terminal 3, ssh to your server
      - two parts are different  from meetup1
       - meetup3 has different public DNS address
       - copy and paste meetup3's id_ras.pub into the same file as third line
-- in the end, you should have a file which contains three rsa keys
+ - in the end, you should have a file which contains three rsa keys
 
 2. configure "authorized_keys" file for three instances
-- on meetup1 instance
+ - on meetup1 instance
   - cd .ssh
   - vi authorized_keys
   - go to the end of file by "ESC->o"
   - copy/paste three rsa keys to the end of file
     you should have one original keys and three new keys in the end
   - save and exit file by "ESC->wq!"
-- on meetup2 instance, do the same
-- on meetup3 instance, do the same
+ - on meetup2 instance, do the same
+ - on meetup3 instance, do the same
 
 3. configure "hosts" file for three instances
-- on meetup 1 instance
+ - on meetup 1 instance
  	- sudo vi /etc/hosts
  	- find your private DNS from EC2 console
  	-- add three lines to the end of files, such as
  	172.31.43.177 meetup1
  	172.31.43.179 meetup2
  	172.31.43.178 meetup3
-- on meetup2 instance, do the same
-- on meetup3 instance, do the same
+ - on meetup2 instance, do the same
+ - on meetup3 instance, do the same
 
 4. test connections among cluster
-  - from meetup1
+ - from meetup1
   	- ping meetup2
   	- ping meetup3
-  - from meetup2
+ - from meetup2
   	- ping meetup1
   	- ping meetup3
-  - from meetup3
+ - from meetup3
   	- ping meetup1
   	- ping meetup2
-  - ctrl +c to stop pinging
+ - ctrl +c to stop pinging
 
 ### Hadoop installation and configuration
 
