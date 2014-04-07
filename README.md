@@ -1,7 +1,9 @@
 Hadoop Workshop I and II Tutorial:
 
 Goal: 
+
 — configure a Hadoop Cluster on Amazon EC2
+
 — run two sample map reduce jobs on the cluster
 
 Preparation:
