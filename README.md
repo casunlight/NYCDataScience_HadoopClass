@@ -61,16 +61,9 @@ Preparation:
 		- choose type="Custom TCP", port range="9000", "save"
 		- choose type="Custom TCP", port range="9001", "save"
 		- choose type="Custom TCP", port range="50000 - 50100", "save"
-		- double check all your inbound setting, they should look like:
-		Type, Protocol, Port Range, Source
-		SSH, TCP, 22, Anywhere 0.0.0.0/0
-		Custom TCP Rule, TCP, 9001, Anywhere, 0.0.0.0/0
-		Custom TCP Rule, TCP, 9000, Anywhere, 0.0.0.0/0
-		Custom TCP Rule, TCP, 50000 - 50100, Anywhere, 0.0.0.0/0
-		All ICMP, ICMP, 0 - 65535, Anywhere, 0.0.0.0/0
 		
 		```no-highlight
-		Colons can be used to align columns.
+		double check all your inbound setting, they should look like:
 
 		| Type            | Protocol  | Port Range    | Source            |
 		| ----------------|:---------:| -------------:|------------------:|
