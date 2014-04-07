@@ -103,24 +103,24 @@ Server configuration
     | go to the end of line| ESC->o           |
 
 1. generate your server rsa key
-   * find your meetup1's public DNS and get its RSA public key
-   - ssh to your server
-   	- ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
+	* find your meetup1's public DNS and get its RSA public key
+    - ssh to your server
+   	 ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
    	- Are you sure you want to continue connecting (yes/no)? yes
-   - generate your server key
+    - generate your server key
     - ssh-keygen -t rsa 
     - do "Enter" three times
     - cd .ssh
     - vi id_rsa.pub
     - copy and paste it into a text file for future
 
-    * find your meetup2's public DNS and generate its RSA public key
-      - two parts are different 
+	* find your meetup2's public DNS and generate its RSA public key
+    - two parts are different 
       - meetup2 has different public DNS address
       - copy and paste meetup2's id_ras.pub into the same file as second line
 
     * find your meetup3's public DNS and generate its RSA public key
-      - two parts are different 
+    - two parts are different 
       - meetup3 has different public DNS address
       - copy and paste meetup3's id_ras.pub into the same file as third line
 
