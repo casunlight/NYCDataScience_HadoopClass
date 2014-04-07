@@ -45,7 +45,6 @@
    - see a download file window, choose a secure folder to save your .pem file which will be your private key. For me, I get the file called "EC2UbuntuLTSThreeT1Micro.pem";
 
 4. create EC2 instances
-
    - Each instance is like a seperate machine.
    - on your left panel of EC2 dashboard,, click on 
 	"instances" category's "instances";
@@ -58,14 +57,10 @@
    - click on "launch";
    - choose the key pair "vivian_zhang_supstat";
    - check the acknowleage box;
-   - click on "launch instance",
-	you should see "Your instances are now launching";
-    scroll down to the bottom, click on "view instances",
-    click one each instance and rename them, such as "meetup1","meetup2","meetup3",
-    wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
+   - click on "launch instance",you should see "Your instances are now launching";
+    scroll down to the bottom, click on "view instances",click one each instance and rename them, such as "meetup1","meetup2","meetup3",wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
-
 	- Each group is like a firewall. The nodes of the same cluster belong to the same security group.
 	- click on "create security groups",put name such as "meetup_security";
 	- under "inbound" tab, cick on add rules
@@ -88,7 +83,6 @@
 		| All ICMP        | ICMP      | 0 - 65535(or na)|Anywhere 0.0.0.0/0 |
 
 6. manage your instance
-
    - know how to turn on and off the instances
    - select the instance, right click to choose "stop", you won't be able to use this instance and won't be charged;
    - select the instance, right click to choose "start", you can use the instance and will be charged.
