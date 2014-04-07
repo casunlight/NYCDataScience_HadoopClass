@@ -5,7 +5,8 @@ Goal:
 — run two sample map reduce jobs on the cluster
 
 Preparation:
-1. apply for a AWS acct from http://aws.amazon.com/account/
+1. apply for a AWS acct 
+   * go to http://aws.amazon.com/account/
 	put name, email, click on "sign in";
 	put full name, email, billing info, credit bard;
 	pass the phone number authorization;
@@ -13,6 +14,7 @@ Preparation:
 	You should see message "Thank you for updating your Amazon Web Services Account!”.
 
 2. log in your acct
+   * sign in using the acct/pass you just made.
 	choose "Launch the AWS Management Console";
 	click on button "sign in to the AWS console";
 	choose "I am a returning user and my password is";
