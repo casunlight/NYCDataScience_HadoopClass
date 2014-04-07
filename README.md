@@ -37,8 +37,8 @@ Preparation:
 	- on your left panel of EC2 dashboard, click on 
 	"network & security" category's "Key Pairs";
 	- click on button "create key pair";
-	- type your key pair name, for me, I put "vivian_zhang_supstat";
-	- see a download file window, choose a secure folder to save your .pem file which will be your private key. For me, I get the file called "vivian_zhang_supstat.pem";
+	- type your key pair name, for me, I put "EC2UbuntuLTSThreeT1Micro";
+	- see a download file window, choose a secure folder to save your .pem file which will be your private key. For me, I get the file called "EC2UbuntuLTSThreeT1Micro.pem";
 
 4. create EC2 instances
    * Each instance is like a seperate machine.
@@ -90,7 +90,7 @@ Preparation:
 
 Server configuration
 
-1. You are required to use vi editor. The basic operations are:   
+0. You are required to use vi editor. The basic operations are:   
 
 	```no-highlight
 	 Cheet sheet for vi
@@ -101,6 +101,32 @@ Server configuration
     | finish and save      | ESC->:->wq->Enter|
     | finish and not save  | ESC->q!->Enter   |
     | go to the end of line| ESC->o           |
+
+1. generate your server rsa key
+   * find your meetup1's public DNS and get its RSA public key
+   - ssh to your server
+   	- ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
+   	- Are you sure you want to continue connecting (yes/no)? yes
+   - generate your server key
+    - ssh-keygen -t rsa 
+    - do "Enter" three times
+    - cd .ssh
+    - vi id_rsa.pub
+    - copy and paste it into a text file for future
+
+    * find your meetup2's public DNS and generate its RSA public key
+      - two parts are different 
+      - meetup2 has different public DNS address
+      - copy and paste meetup2's id_ras.pub into the same file as second line
+
+    * find your meetup3's public DNS and generate its RSA public key
+      - two parts are different 
+      - meetup3 has different public DNS address
+      - copy and paste meetup3's id_ras.pub into the same file as third line
+
+
+
+
 
 
 
