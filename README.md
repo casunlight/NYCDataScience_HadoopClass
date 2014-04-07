@@ -88,7 +88,16 @@ Preparation:
    	- select the instance, right click to choose "start", you can use the instance and will be charged.
    	Next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.
 
-7.
+Server configuration
+
+1. You are required to use vi editor. The basic operations are:    
+    | Mode                 | Key stokes       | 
+    | ---------------------|:----------------:| 
+    | insertion modei      | i                | 
+    | finish and save      | ESC->:->wq->Enter|
+    | finish and not save  | ESC->q!->Enter   |
+    | go to the end of line| ESC->o           |
+
 
 
 
