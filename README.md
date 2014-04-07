@@ -1,12 +1,12 @@
-Hadoop Workshop I and II Tutorial:
+# Hadoop Workshop I and II Tutorial:
 
-Goal: 
+## Goal: 
 
 — configure a Hadoop Cluster on Amazon EC2
 
 — run two sample map reduce jobs on the cluster
 
-I will go over the details:
+## I will go over the details:
 
 - Preparation
 
@@ -14,7 +14,7 @@ I will go over the details:
 
 - Hadoop installation and configuration
 
-Preparation:
+### Preparation:
 
 1. apply for a AWS acct 
    * go to http://aws.amazon.com/account/
@@ -96,7 +96,7 @@ Preparation:
    	- select the instance, right click to choose "start", you can use the instance and will be charged.
    	Next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.
 
-Server configuration
+### Server configuration
 
 0. You are required to use vi editor. The basic operations are:   
 
@@ -192,7 +192,7 @@ Server configuration
 
   * ctrl +c to stop pinging
 
-
+### Hadoop installation and configuration
 
 
 
