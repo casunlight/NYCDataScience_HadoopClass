@@ -182,7 +182,6 @@
 	- wget http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
 	- tar -xzvf hadoop-1.2.1.tar.gz 
 	- cd hadoop-1.2.1/conf 
-
  2. configure the environment
 	- configure Java Path
 	  - vi hadoop-env.sh
@@ -227,7 +226,6 @@
 	- copy all the configuration from master node to two slave nodes
 	  - scp -r ~/hadoop-1.2.1 meetup2:/home/ubuntu
       - scp -r ~/hadoop-1.2.1 meetup3:/home/ubuntu
-
 3. format
 	- ~/hadoop-1.2.1/bin/hadoop namenode -format 
 	- you should get "Storage directory /home/ubuntu/hadoop/tmp/dfs/name has been successfully formatted."
@@ -235,7 +233,6 @@
 	- you should find the two folders 
 	  - dfs->name->current
 	  - dfs->name->image
-
 4. start your hadoop
  - ~/hadoop-1.2.1/bin/start-all.sh
  - test whether the hadoop is running
@@ -249,10 +246,8 @@
     7653 TaskTracker
 	7490 DataNode
 	7713 Jps
-
 5. stop your hadoop
  - ~/hadoop-1.2.1/bin/stop-all.sh 
-
 
 ## Congratulation! You have your first hadoop cluster!
 
@@ -260,3 +255,4 @@
  - you can find log files under "cd ~/hadoop/tmp/mapred/local/userlogs/"
  - pick one job folder, such as "job_201404071413_0002"
  - pick one log file, such as "vi attempt_201404071413_0002_m_000001_3"
+
