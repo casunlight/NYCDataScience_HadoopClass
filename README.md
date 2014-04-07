@@ -60,9 +60,11 @@ Preparation:
     	wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
-   * Each group is like a firewall. The nodes of the same cluster belong to the same security group.
-	- click on "create security groups",put name such as "meetup_security";
-	- under "inbound" tab, cick on add rules;
+	* Each group is like a firewall. The nodes of the same cluster belong to the same security group.
+
+	* click on "create security groups",put name such as "meetup_security";
+
+	* under "inbound" tab, cick on add rules;
         - add five rules:
         - choose type="SSH",  "save";
 		- choose type="ALL ICM", Source=Anywhere, "save";
