@@ -6,6 +6,14 @@ Goal:
 
 — run two sample map reduce jobs on the cluster
 
+I will go over the details:
+
+- Preparation
+
+- Server configuration
+
+- Hadoop installation and configuration
+
 Preparation:
 
 1. apply for a AWS acct 
