@@ -60,16 +60,16 @@
    - check the acknowleage box;
    - click on "launch instance",
 	you should see "Your instances are now launching";
-    	scroll down to the bottom, click on "view instances",
-    	click one each instance and rename them, such as "meetup1","meetup2","meetup3",
-    	wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
+    scroll down to the bottom, click on "view instances",
+    click one each instance and rename them, such as "meetup1","meetup2","meetup3",
+    wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
 
 	- Each group is like a firewall. The nodes of the same cluster belong to the same security group.
 	- click on "create security groups",put name such as "meetup_security";
 	- under "inbound" tab, cick on add rules
-        - add five rules:
+      - add five rules:
         - choose type="SSH",  "save";
 		- choose type="ALL ICM", Source=Anywhere, "save";
 		- choose type="Custom TCP", port range="9000", choose "anywhere",save;
