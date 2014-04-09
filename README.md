@@ -103,6 +103,7 @@
     | go to the end of line| ESC->o           |
 
 2. generate your server rsa key for three instances
+Note: for windows user, you can refer to [Connect to Your Amazon EC2 Instance from Windows Using PuTTY] (http://docs.aws.amazon.com/gettingstarted/latest/wah-linux/getting-started-deploy-app-connect.html)
  - find your meetup1's public DNS and get its RSA public key
     - open terminal 1, ssh to your server
       - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in .ssh folder, so I do "cd .ssh".
@@ -178,7 +179,7 @@
  - the mirror is from [Columbia Univ](http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/)
  - all the operations in the below will be run on meetup1(your master node)
 
- 1. download haoop source codes
+ 1. download hadoop source codes
 	- wget http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
 	- tar -xzvf hadoop-1.2.1.tar.gz 
 	- cd hadoop-1.2.1/conf 
