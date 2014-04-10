@@ -109,13 +109,13 @@
    	  - remote access to your instance by "ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@eyour_public_dns". 
 
 	  ```no-highlight
-       make your own reference table 
+       	make your own reference table 
 
-  	 | machine name| public DNS                             | 
-  	 | ------------|:--------------------------------------:|  	  
-  	 | meetup1     |ec2-54-86-2-169.compute-1.amazonaws.com |
-  	 | meetup2     |ec2-54-86-4-68.compute-1.amazonaws.com  |
-  	 | meetup3     |ec2-54-86-10-200.compute-1.amazonaws.com|
+  	 	| machine name| public DNS                             | 
+  	 	| ------------|:--------------------------------------:|  	  
+  	 	| meetup1     |ec2-54-86-2-169.compute-1.amazonaws.com |
+  	 	| meetup2     |ec2-54-86-4-68.compute-1.amazonaws.com  |
+  	 	| meetup3     |ec2-54-86-10-200.compute-1.amazonaws.com|
 
   	- you should be able to make your assemblied commands:
       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
