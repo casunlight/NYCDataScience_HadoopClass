@@ -121,8 +121,7 @@
       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-4-68.compute-1.amazonaws.com
       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-10-200.compute-1.amazonaws.com
-
-   	- are you sure you want to continue connecting (yes/no)? yes
+   	- for "are you sure you want to continue connecting (yes/no)?"" put "yes"
     - generate your server key
     - ssh-keygen -t rsa 
     - do "Enter" three times
