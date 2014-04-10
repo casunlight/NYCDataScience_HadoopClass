@@ -106,16 +106,16 @@
  - find your meetup1's public DNS and get its RSA public key
     - open terminal 1, ssh to your server
       - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in my ".ssh" folder, so I do "cd .ssh" first.
-   	  - remote access to your instance by "ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com". make sure you change "ec2-54-209-171-193.compute-1.amazonaws.com" to your own first instance's public DNS
+   	  - remote access to your instance by "ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@eyour_public_dns". 
 
-	 ```no-highlight
-     make your own reference table 
+	  ```no-highlight
+      make your own reference table 
 
-  	| machine name| public DNS                             | 
-  	| ------------|:--------------------------------------:|  	  
-  	| meetup1     |ec2-54-86-2-169.compute-1.amazonaws.com |
-  	| meetup2     |ec2-54-86-4-68.compute-1.amazonaws.com  |
-  	| meetup3     |ec2-54-86-10-200.compute-1.amazonaws.com|
+  	 | machine name| public DNS                             | 
+  	 | ------------|:--------------------------------------:|  	  
+  	 | meetup1     |ec2-54-86-2-169.compute-1.amazonaws.com |
+  	 | meetup2     |ec2-54-86-4-68.compute-1.amazonaws.com  |
+  	 | meetup3     |ec2-54-86-10-200.compute-1.amazonaws.com|
 
   	you should be able to make your assemblied commands:
       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
@@ -129,7 +129,7 @@
     - cd .ssh
     - vi id_rsa.pub
     - copy and paste it into a text file for future
-    
+
  - find your meetup2's public DNS and generate its RSA public key
     - open terminal 2, ssh to your server
     - two parts are different from meetup1
