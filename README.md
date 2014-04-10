@@ -107,15 +107,18 @@
     - open terminal 1, ssh to your server
       - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in my ".ssh" folder, so I do "cd .ssh" first.
    	  - remote access to your instance by "ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com". make sure you change "ec2-54-209-171-193.compute-1.amazonaws.com" to your own first instance's public DNS
-  | machine name| public DNS                      | 
-  | ------------|:-------------------------------:|  	  
-  |meetup1|ec2-54-86-2-169.compute-1.amazonaws.com|
-  |meetup2|ec2-54-86-4-68.compute-1.amazonaws.com|
-  |meetup3|ec2-54-86-10-200.compute-1.amazonaws.com|
-  assemblied commands:
-  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
-  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-4-68.compute-1.amazonaws.com
-  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-10-200.compute-1.amazonaws.com
+
+	```no-highlight
+    Your own reference table
+  	| machine name| public DNS                      | 
+  	| ------------|:-------------------------------:|  	  
+  	|meetup1|ec2-54-86-2-169.compute-1.amazonaws.com|
+  	|meetup2|ec2-54-86-4-68.compute-1.amazonaws.com|
+  	|meetup3|ec2-54-86-10-200.compute-1.amazonaws.com|
+  	assemblied commands:
+       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
+       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-4-68.compute-1.amazonaws.com
+       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-10-200.compute-1.amazonaws.com
    	  - Are you sure you want to continue connecting (yes/no)? yes
       - generate your server key
       - ssh-keygen -t rsa 
