@@ -37,7 +37,7 @@
 	- see "EC2 Dashboard" on the top left corner.
 
 3. create your key pair
-   - you are authorizate yourself and communicate with Amazon cloud using public and private key pair.
+   - you authorize yourself and communicate with Amazon cloud using public and private key pair.
    - on your left panel of EC2 dashboard, click on 
 	"network & security" category's "Key Pairs";
    - click on button "create key pair";
@@ -45,7 +45,7 @@
    - see a download file window, choose a secure folder to save your .pem file which will be your private key. For me, I get the file called "EC2UbuntuLTSThreeT1Micro.pem";
 
 4. create EC2 instances
-   - Each instance is like a seperate machine.
+   - How to understand instance? each instance is like a seperate machine(or pc or laptop).
    - on your left panel of EC2 dashboard,, click on 
 	"instances" category's "instances";
    - click on button "launch instance";
@@ -55,14 +55,14 @@
    - put "3" into "Number of instances";
    - click on "review and launch";
    - click on "launch";
-   - choose the key pair "vivian_zhang_supstat";
+   - choose the key pair "EC2UbuntuLTSThreeT1Micro";
    - check the acknowleage box;
    - click on "launch instance",you should see "Your instances are now launching";
     scroll down to the bottom, click on "view instances",click one each instance and rename them, such as "meetup1","meetup2","meetup3",wait till you see the status checks is changed from "initializing" to "2/2 checks passed".
 
 5. configure security group
-	- Each group is like a firewall. The nodes of the same cluster belong to the same security group.
-	- click on "create security groups",put name such as "meetup_security";
+	- each group is like a firewall. The nodes of the same cluster need to be in the same security group.
+	- click on "create security groups",put name such as "launch-wizard-1" or change to your customized name;
 	- under "inbound" tab, cick on add rules
       - add five rules:
         - choose type="SSH",  "save";
@@ -86,7 +86,7 @@
    - know how to turn on and off the instances
    - select the instance, right click to choose "stop", you won't be able to use this instance and won't be charged;
    - select the instance, right click to choose "start", you can use the instance and will be charged.
-   	Next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.
+   --next time, if you restart the instance, your "public DNS" will be different, but your "private DNS" will not changed.  If you reboot the instance, your "public DNS" will be the same as before rebooting.
 
 ### Server configuration
 
@@ -103,11 +103,19 @@
     | go to the end of line| ESC->o           |
 
 2. generate your server rsa key for three instances
-Note: for windows user, you can refer to [Connect to Your Amazon EC2 Instance from Windows Using PuTTY] (http://docs.aws.amazon.com/gettingstarted/latest/wah-linux/getting-started-deploy-app-connect.html)
  - find your meetup1's public DNS and get its RSA public key
     - open terminal 1, ssh to your server
-      - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in .ssh folder, so I do "cd .ssh".
-   	  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com
+      - before you run ssh, make sure you are at the location you can access your .pem file. I save .pem in my ".ssh" folder, so I do "cd .ssh" first.
+   	  - remote access to your instance by "ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-209-171-193.compute-1.amazonaws.com". make sure you change "ec2-54-209-171-193.compute-1.amazonaws.com" to your own first instance's public DNS
+  | machine name| public DNS                      | 
+  | ------------|:-------------------------------:|  	  
+  |meetup1|ec2-54-86-2-169.compute-1.amazonaws.com|
+  |meetup2|ec2-54-86-4-68.compute-1.amazonaws.com|
+  |meetup3|ec2-54-86-10-200.compute-1.amazonaws.com|
+  assemblied commands:
+  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
+  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-4-68.compute-1.amazonaws.com
+  - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-10-200.compute-1.amazonaws.com
    	  - Are you sure you want to continue connecting (yes/no)? yes
       - generate your server key
       - ssh-keygen -t rsa 
@@ -179,7 +187,7 @@ Note: for windows user, you can refer to [Connect to Your Amazon EC2 Instance fr
  - the mirror is from [Columbia Univ](http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/)
  - all the operations in the below will be run on meetup1(your master node)
 
- 1. download hadoop source codes
+ 1. download haoop source codes
 	- wget http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
 	- tar -xzvf hadoop-1.2.1.tar.gz 
 	- cd hadoop-1.2.1/conf 
