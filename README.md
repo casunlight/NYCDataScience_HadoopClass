@@ -117,18 +117,19 @@
   	| meetup2     |ec2-54-86-4-68.compute-1.amazonaws.com  |
   	| meetup3     |ec2-54-86-10-200.compute-1.amazonaws.com|
 
-  	 you should be able to make your assemblied commands:
-       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
-       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-4-68.compute-1.amazonaws.com
-       - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-10-200.compute-1.amazonaws.com
-       
-   	  - Are you sure you want to continue connecting (yes/no)? yes
-      - generate your server key
-      - ssh-keygen -t rsa 
-      - do "Enter" three times
-      - cd .ssh
-      - vi id_rsa.pub
-      - copy and paste it into a text file for future
+  	you should be able to make your assemblied commands:
+      - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-2-169.compute-1.amazonaws.com
+      - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-4-68.compute-1.amazonaws.com
+      - ssh  -i EC2UbuntuLTSThreeT1Micro.pem  ubuntu@ec2-54-86-10-200.compute-1.amazonaws.com
+
+   	- Are you sure you want to continue connecting (yes/no)? yes
+    - generate your server key
+    - ssh-keygen -t rsa 
+    - do "Enter" three times
+    - cd .ssh
+    - vi id_rsa.pub
+    - copy and paste it into a text file for future
+    
  - find your meetup2's public DNS and generate its RSA public key
     - open terminal 2, ssh to your server
     - two parts are different from meetup1
