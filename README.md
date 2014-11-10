@@ -1,7 +1,6 @@
 # Hadoop Workshop I and II Tutorial:
 ## RSVP for the class from [NYC Data Science Academy](http://nycdatascience.com/course/hadoop-data-analytic-platform/)
-   * Take it online (17 weeks long, 2 hours/week)
-   * Take it in classroom on workday(5 weeks, 10 of Wed and Fri, 3.5 hours/night)
+   * Take it online
    * Take it in classroom on weekend(5 weeks, 5 full Sundays, 7 hours/day)
 
 ## Goal: 
